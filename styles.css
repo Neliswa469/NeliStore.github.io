@@ -1,0 +1,260 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h3 {
+    color: #ff6f61;  /* A soft red for accent */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6f61;
+    padding: 15px;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links li a {
+    color: white;
+    font-size: 1rem;
+}
+
+.navbar .hamburger {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Product Card Styles */
+.product-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 20px;
+}
+
+.product-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    /* */
+    background-color: transparent; /* Removes background color */
+    box-shadow: none; /* Removes any box shadow, if it was applied */
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0;
+    /**/
+    background-color: transparent; /* Ensures hover doesn't add a background */
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-info {
+    padding: 20px;
+    text-align: center;
+    /**/
+    background-color: transparent; /* Ensures the text area has no background */
+}
+
+.product-card:hover .product-info h3 {
+    color: #ff6f61;
+}
+
+/* Testimonials Section Styles */
+.testimonials-section {
+    padding: 30px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.testimonials-section h2 {
+    color: #ff6f61;
+    margin-bottom: 30px;
+}
+
+.testimonial-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.testimonial-card {
+    width: 80%;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+    color: #555;
+}
+
+.testimonial-card p {
+    margin-bottom: 10px;
+}
+
+.testimonial-card span {
+    font-weight: bold;
+    color: #ff6f61;  /* Color for the customer names */
+}
+
+/* Contact Section Styles */
+.contact-section {
+    padding: 30px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.contact-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.info-item i {
+    margin-right: 10px;
+    color: #ff6f61;
+}
+
+.info-item span {
+    color: #555;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #ff6f61;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Back Button Styles */
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #ff6f61;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #e65c55;
+}
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+    }
+    .navbar .hamburger {
+        display: block;
+    }
+    .navbar .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #ff6f61;
+        width: 200px;
+        padding: 10px;
+    }
+    .navbar .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+
+/* Valentine’s Day Gift Banner */
+.valentine-banner {
+    background-color: #ff6f61;  /* A soft red color */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+    top: 450px;
+    left: 0;
+    z-index: 1000;
+}
+
+.valentine-banner p {
+    margin: 0;
+}
+
+.valentine-banner:hover {
+    background-color: #e65c55;
+}
+
+/* Making the banner disappear after a certain time */
+.valentine-banner {
+    animation: fadeOut 40s forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+}
